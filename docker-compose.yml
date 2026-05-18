@@ -1,0 +1,11 @@
+services:
+  cmap-react:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cmap-react-app
+    ports:
+      - "3000:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=development
