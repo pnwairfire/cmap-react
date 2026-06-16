@@ -15,10 +15,10 @@ COPY . .
 
 # Build the app
 # Note: package.json has a build script that renames index.html to app.html
-RUN NODE_OPTIONS=--openssl-legacy-provider npm run build
+RUN NODE_OPTIONS="--openssl-legacy-provider --max-old-space-size=4096" GENERATE_SOURCEMAP=false npm run build
 
 # Stage 2: Serve the application with Nginx
-FROM nginx:alpine
+FROM nginx:alpine AS production
 
 # Copy custom Nginx configuration
 COPY nginx.conf /etc/nginx/conf.d/default.conf
