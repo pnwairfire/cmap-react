@@ -99,5 +99,8 @@
     "jest-enzyme": "^7.1.2",
     "knip": "^5.30.1",
     "prettier": "^3.6.2"
+  },
+  "overrides": {
+    "jsx-ast-utils": "^3.3.0"
   }
 }
