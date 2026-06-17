@@ -16,6 +16,14 @@ Ensure you have node 12.18.1 installed in your local environment.
 
 1. `npm run start` to start the development web server.
 
+### Environment Variables
+
+Copy the example environment file and configure the variables:
+
+```bash
+cp .env.example .env
+```
+
 ### Configuring API Endpoint
 
 The API endpoint is derived from the value of the `NODE_ENV` environment variable as follows:
